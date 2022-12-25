@@ -18,9 +18,5 @@ RUN apt install -y vim && \
 RUN wget https://getcomposer.org/installer -O - -q \
     | php -- --install-dir=/bin --filename=composer --quiet \
 ENV COMPOSER_ALLOW_SUPERUSER 1
-# NODE JS with NVM
-SHELL ["/bin/bash", "--login", "-c"]
-RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-RUN nvm install v14
 
 WORKDIR /var/www
