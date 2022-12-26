@@ -51,6 +51,14 @@ services:
     networks:
       - internal
 
+networks:
+  internal:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.222.0/28
+
 volumes:
   db_data:
     driver: local
