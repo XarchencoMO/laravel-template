@@ -16,7 +16,7 @@ services:
     networks:
       - internal
   node:
-    container_name: node_${PROJECT_NAME}
+    container_name: node_${PROJECT_NAME:-empty_template}
     build:
       context: docker/node
     volumes:

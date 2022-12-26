@@ -2,7 +2,5 @@ FROM node
 
 WORKDIR /var/www
 
-#COPY package.json .
-
-# For Symfony webpack encore:
+# TODO : for Symfony
 #CMD yarn install && yarn dev-server

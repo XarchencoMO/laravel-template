@@ -16,7 +16,10 @@ RUN apt install -y vim && \
     docker-php-ext-install pdo_mysql
 # Composer
 RUN wget https://getcomposer.org/installer -O - -q \
-    | php -- --install-dir=/bin --filename=composer --quiet \
+    | php -- --install-dir=/bin --filename=composer --quiet
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
 WORKDIR /var/www
+
+# TODO : uncomment for symfony/laravel
+# ENTRYPOINT composer install
