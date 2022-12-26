@@ -20,6 +20,3 @@ RUN wget https://getcomposer.org/installer -O - -q \
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
 WORKDIR /var/www
-
-# TODO : uncomment for symfony/laravel
-# ENTRYPOINT composer install
