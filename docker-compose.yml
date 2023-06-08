@@ -2,7 +2,6 @@ version: '3'
 
 services:
   app:
-    container_name: app_${APP_NAME:?err}
     build:
       context: docker/php-fpm
     volumes:
@@ -13,7 +12,6 @@ services:
     networks:
       - internal
   node:
-    container_name: node_${APP_NAME:?err}
     build:
       context: docker/node
     volumes:
@@ -23,7 +21,6 @@ services:
     networks:
       - internal
   nginx:
-    container_name: nginx_${APP_NAME:?err}
     image: nginx:alpine
     volumes:
       - ./:/var/www
@@ -33,7 +30,6 @@ services:
     networks:
       - internal
   mysql:
-    container_name: mysql_${APP_NAME:?err}
     command: --default-authentication-plugin=mysql_native_password
     image: mysql
     environment:
