@@ -21,3 +21,5 @@ yarn-error.log
 composer.lock
 _ide_helper.php
 _ide_helper_models.php
+public/vendor
+package-lock.json
