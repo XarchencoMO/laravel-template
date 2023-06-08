@@ -19,3 +19,5 @@ yarn-error.log
 /docker/php-fpm/.ssh/id_rsa
 /docker/php-fpm/.ssh/id_rsa.pub
 composer.lock
+_ide_helper.php
+_ide_helper_models.php

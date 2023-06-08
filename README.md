@@ -34,8 +34,12 @@
 - `php artisan ide-helper:models` - [PHPDocs for models](#automatic-PHPDocs-for-models)
 - `php artisan ide-helper:meta` - [PhpStorm Meta file](#phpstorm-meta-for-container-instances)
 
-10. 
-
+10. В проекте установлен laravel envoy и есть конфиг для CI, в конфиг необходимо подставить данные ваших дев и прод серверов, указать директории в которых хранится проект
+    запуск CI осуществляется командой: 
+    ```shell
+    php vendor/bin/envoy run deploy
+    ```
+11. 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
