@@ -16,3 +16,6 @@ npm-debug.log
 yarn-error.log
 /.fleet
 /.vscode
+/docker/php-fpm/.ssh/id_rsa
+/docker/php-fpm/.ssh/id_rsa.pub
+composer.lock
