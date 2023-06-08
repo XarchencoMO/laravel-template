@@ -1,3 +1,41 @@
+## Laravel docker compose шаблон для проектов nii
+
+### Инструкция по использованию:
+
+1. Скачайте репозиторий
+2. Из корня проекта введите команду
+   ```shell
+   git remote remove origin
+   ```
+   (удалить репозиторий содержащий шаблон)
+
+
+3. Измените в файле `.env` переменную `APP_NAME`
+4. Введите команду:
+   ```shell
+   git remote add origin <link_to_your_gitlab_repository>
+   ```
+
+   (Добавить ваш корневой репозиторий в проект)
+
+
+5. Запустите команду `docker compose up -d --build`
+6. Ожидайте сборки контейнеров
+7. Зайдите в контейнер app:
+   ```shell
+   docker compose exec -ti app /bin/bash
+   ```
+8. Введите команду
+   ```shell
+   composer install
+   ```
+9. В проекте установлен laravel_ide_helper, после установки зависимостей, запустится скрипт, который сгенерирует файлы ide_helper.php и ide_helper_models.php, так же их можно сгенерировать вручную введя команды: 
+- `php artisan ide-helper:generate` - [PHPDoc generation for Laravel Facades ](#automatic-phpdoc-generation-for-laravel-facades)
+- `php artisan ide-helper:models` - [PHPDocs for models](#automatic-PHPDocs-for-models)
+- `php artisan ide-helper:meta` - [PhpStorm Meta file](#phpstorm-meta-for-container-instances)
+
+10. 
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
