@@ -9,8 +9,7 @@ services:
             - ./docker/php-fpm/php.ini:/etc/php81/conf.d/php.ini
             - ./docker/php-fpm/docker.conf:/etc/php81//php-fpm.d/docker.conf
             - ./docker/php-fpm/zz-docker.conf:/etc/php81//php-fpm.d/zz-docker.conf
-            - ./docker/php-fpm/.ssh/id_rsa.pub:/root/.ssh/id_rsa.pub
-            - ./docker/php-fpm/.ssh/id_rsa:/root/.ssh/id_rsa
+            - ./docker/php-fpm/.ssh/:/root/.ssh/
         environment:
             PHP_IDE_CONFIG: "serverName=Docker"
         depends_on:
