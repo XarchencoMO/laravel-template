@@ -4,35 +4,35 @@ LABEL maintainer_1="XarchencoMO"
 LABEL maintainer_2="andtit2001"
 # php packages
 RUN apk add vim openssh\
-    php81 \
-    php81-fpm \
-    php81-ctype \
-    php81-curl \
-    php81-dom \
-    php81-fileinfo \
-    php81-ftp \
-    php81-gd \
-    php81-iconv \
-    php81-json \
-    php81-mbstring \
-    php81-mysqlnd \
-    php81-openssl \
-    php81-pdo_mysql \
-    php81-phar \
-    php81-posix \
-    php81-session \
-    php81-sodium \
-    php81-simplexml \
-    php81-tokenizer \
-    php81-xdebug \
-    php81-xml \
-    php81-xmlreader \
-    php81-xmlwriter \
-    php81-zlib \
-    php81-zip \
-    && ln -sf /usr/bin/php81 /usr/bin/php \
+    php82 \
+    php82-fpm \
+    php82-ctype \
+    php82-curl \
+    php82-dom \
+    php82-fileinfo \
+    php82-ftp \
+    php82-gd \
+    php82-iconv \
+    php82-json \
+    php82-mbstring \
+    php82-mysqlnd \
+    php82-openssl \
+    php82-pdo_mysql \
+    php82-phar \
+    php82-posix \
+    php82-session \
+    php82-sodium \
+    php82-simplexml \
+    php82-tokenizer \
+    php82-xdebug \
+    php82-xml \
+    php82-xmlreader \
+    php82-xmlwriter \
+    php82-zlib \
+    php82-zip \
+    && ln -sf /usr/bin/php82 /usr/bin/php \
     && rm -rf /var/cache/apk/* \
-    && cp /etc/php81/php-fpm.d/www.conf /etc/php81/php-fpm.d/docker.conf
+    && cp /etc/php82/php-fpm.d/www.conf /etc/php82/php-fpm.d/docker.conf
 # Composer
 RUN wget https://getcomposer.org/installer -O - -q \
     | php -- --install-dir=/bin --filename=composer --quiet
@@ -40,4 +40,4 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 
 WORKDIR /var/www
 
-CMD ["/usr/sbin/php-fpm81", "-R", "--nodaemonize"]
+CMD ["/usr/sbin/php-fpm82", "-R", "--nodaemonize"]
