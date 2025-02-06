@@ -12,9 +12,9 @@ services:
             - ./docker/php-fpm/.ssh/:/root/.ssh/
         environment:
             PHP_IDE_CONFIG: "serverName=Docker"
-        depends_on:
-            mysql:
-                condition: service_healthy
+#        depends_on:
+#            mysql:
+#                condition: service_healthy
     node:
         build:
             context: docker/node
